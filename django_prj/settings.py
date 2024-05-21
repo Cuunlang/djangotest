@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-$y0jzvbwe0itcr3z!qppg8bzh7jge)_gkuv9c!$w-%6nzfgsub
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1","localhost","13.209.98.36"]
+ALLOWED_HOSTS = ["127.0.0.1","localhost","*"]
 
 
 # Application definition
@@ -127,6 +127,8 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # CORS 추가
-CORS_ORIGIN_WHITELIST = (
-    'http://127.0.0.1:8000', 'http://localhost:3000','http://13.209.98.36:9999')
+# 모든 출처를 허용하기
+CORS_ORIGIN_ALLOW_ALL = True
+# 또는 일부 출처만 허용하기
+# CORS_ORIGIN_WHITELIST = ('http://127.0.0.1:8000', 'http://localhost:3000','http://13.209.98.36:9999')
 CORS_ALLOW_CREDENTIALS = True
